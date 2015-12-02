@@ -24,6 +24,7 @@ public class FlashLightActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_light);
 
@@ -47,6 +48,8 @@ public class FlashLightActivity extends AppCompatActivity {
         }
 
         getCamera();
+
+        isFlashOn = false;
 
         toggleButtonImage();
 
@@ -119,6 +122,7 @@ public class FlashLightActivity extends AppCompatActivity {
     }
 
     private void playSound() {
+
         if (isFlashOn) {
             mMediaPlayer = MediaPlayer.create(FlashLightActivity.this, R.raw.light_switch_off);
         } else {
@@ -133,6 +137,7 @@ public class FlashLightActivity extends AppCompatActivity {
 
         });
         mMediaPlayer.start();
+
     }
 
     @Override
@@ -144,9 +149,9 @@ public class FlashLightActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (isDeviceHasFlas) {
-            turnOnFlash();
-        }
+//        if (isDeviceHasFlas) {
+//            turnOnFlash();
+//        }
     }
 
     @Override
@@ -163,4 +168,5 @@ public class FlashLightActivity extends AppCompatActivity {
             mCamera = null;
         }
     }
+
 }
