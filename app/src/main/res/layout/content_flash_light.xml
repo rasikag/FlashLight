@@ -10,7 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.rasikag.androidflashlight.FlashLightActivity"
-    tools:showIn="@layout/activity_flash_light">
+    tools:showIn="@layout/activity_flash_light"
+    android:background="@drawable/radial_background">
+
+    <ImageButton
+        android:id="@+id/btnSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dip"
+        android:src="@drawable/btn_switch_on"
+        android:background="@null"
+        android:contentDescription="@null"
+        />
 
 
 </RelativeLayout>
