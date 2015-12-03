@@ -83,8 +83,6 @@ public class FlashLightActivity extends AppCompatActivity {
             if (mCamera == null || mParams == null) {
                 return;
             }
-            playSound();
-
             mParams = mCamera.getParameters();
             mParams.setFlashMode(mParams.FLASH_MODE_TORCH);
             mCamera.setParameters(mParams);
@@ -101,8 +99,6 @@ public class FlashLightActivity extends AppCompatActivity {
             if (mCamera == null || mParams == null) {
                 return;
             }
-            playSound();
-
             mParams = mCamera.getParameters();
             mParams.setFlashMode(mParams.FLASH_MODE_OFF);
             mCamera.setParameters(mParams);
@@ -116,8 +112,10 @@ public class FlashLightActivity extends AppCompatActivity {
     private void toggleButtonImage() {
         if (isFlashOn) {
             mSwich.setImageResource(R.drawable.btn_switch_on);
+            playSound();
         } else {
             mSwich.setImageResource(R.drawable.btn_switch_off);
+            playSound();
         }
     }
 
